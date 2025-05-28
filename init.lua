@@ -18,28 +18,34 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 require('lazy').setup {
+  spec = {
+    require 'plugins.catppuccin',
+    require 'plugins.lazygit',
+    require 'plugins.which-key',
+    -- require 'plugins.telescope',
+    require 'plugins.fzf-lua',
+    require 'plugins.conform',
+    require 'plugins.blink-cmp',
+    require 'plugins.todo-comments',
+    -- require 'plugins.mini',
+    require 'plugins.nvim-treesitter',
+    require 'plugins.indent_line',
+    require 'plugins.autopairs',
+    -- require 'plugins.neo-tree',
+    require 'plugins.oil',
+    require 'plugins.leap',
+    require 'plugins.lualine',
+    require 'plugins.gitsigns',
+    -- LSP Plugins
+    require 'plugins.lsp.lazydev',
+    require 'plugins.lsp.nvim-lspconfig',
 
-  require 'plugins.catppuccin',
-  require 'plugins.lazygit',
-  require 'plugins.which-key',
-  -- require 'plugins.telescope',
-  require 'plugins.fzf-lua',
-  require 'plugins.conform',
-  require 'plugins.blink-cmp',
-  require 'plugins.todo-comments',
-  require 'plugins.mini',
-  require 'plugins.nvim-treesitter',
-  require 'plugins.indent_line',
-  require 'plugins.autopairs',
-  require 'plugins.neo-tree',
-  -- LSP Plugins
-  require 'plugins.lsp.lazydev',
-  require 'plugins.lsp.nvim-lspconfig',
-
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+    -- require 'kickstart.plugins.debug',
+    -- require 'kickstart.plugins.lint',
+  },
+  install = {
+    colorscheme = { 'catppuccin' },
+  },
 }
-
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

@@ -13,5 +13,53 @@ return {
       mode = 'n',
       desc = '[F]ind [F]iles',
     },
+    {
+      '<leader>fb',
+      function()
+        require('fzf-lua').buffers()
+      end,
+      mode = 'n',
+      desc = '[F]ind [B]uffers',
+    },
+    {
+      '<leader>fh',
+      function()
+        require('fzf-lua').oldfiles()
+      end,
+      mode = 'n',
+      desc = '[F]ind [H]istory',
+    },
+    {
+      '<leader>ft',
+      function()
+        require('fzf-lua').tabs()
+      end,
+      mode = 'n',
+      desc = '[F]ind [T]ab',
+    },
+    {
+      '<leader>fk',
+      function()
+        require('fzf-lua').keymaps()
+      end,
+      mode = 'n',
+      desc = '[F]ind [K]eymaps',
+    },
+    {
+      '<leader>fe',
+      function()
+        require('fzf-lua').live_grep()
+      end,
+      mode = 'n',
+      desc = '[F]ind [E]verything',
+    },
+    {
+      '<leader>?',
+      function()
+        require('fzf-lua').helptags()
+      end,
+      mode = 'n',
+      desc = '[F]ind Helps',
+    },
   },
 }
