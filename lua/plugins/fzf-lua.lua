@@ -61,5 +61,13 @@ return {
       mode = 'n',
       desc = '[F]ind Helps',
     },
+    {
+      '<leader>fgs',
+      function()
+        require('fzf-lua').git_status()
+      end,
+      mode = 'n',
+      desc = '[F]ind [G]it [S]tatus',
+    },
   },
 }

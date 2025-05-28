@@ -67,20 +67,30 @@ return {
         map('gra', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
 
         -- Find references for the word under your cursor.
-        -- map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+        map('grr', require('fzf-lua').lsp_references, '[G]oto [R]eferences')
 
         -- Jump to the implementation of the word under your cursor.
         --  Useful when your language has ways of declaring types without an actual implementation.
-        -- map('gri', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+        map('gri', require('fzf-lua').lsp_implementations, '[G]oto [I]mplementation')
 
         -- Jump to the definition of the word under your cursor.
         --  This is where a variable was first declared, or where a function is defined, etc.
         --  To jump back, press <C-t>.
-        -- map('grd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+        map('gd', function()
+          local fzf_lua = require 'fzf-lua'
+          local params = vim.lsp.util.make_position_params()
+          vim.lsp.buf_request(params.bufnr, 'textDocument/definition', params, function(_, result, _, _)
+            if not result or vim.tbl_isempty(result) then
+              vim.notify('No definition found', vim.log.levels.INFO)
+            else
+              fzf_lua.lsp_definitions()
+            end
+          end)
+        end, '[G]oto [D]efinition')
 
         -- WARN: This is not Goto Definition, this is Goto Declaration.
         --  For example, in C this would take you to the header.
-        map('grD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+        map('gD', require('fzf-lua').lsp_declarations, '[G]oto [D]eclaration')
 
         -- Fuzzy find all the symbols in your current document.
         --  Symbols are things like variables, functions, types, etc.
