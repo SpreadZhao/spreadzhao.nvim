@@ -36,6 +36,7 @@ require('lazy').setup {
     require 'plugins.leap',
     require 'plugins.lualine',
     require 'plugins.gitsigns',
+    require 'plugins.toggleterm',
     -- LSP Plugins
     require 'plugins.lsp.lazydev',
     require 'plugins.lsp.nvim-lspconfig',
