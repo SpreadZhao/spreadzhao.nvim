@@ -22,7 +22,7 @@ return {
       desc = '[F]ind [B]uffers',
     },
     {
-      '<leader>fh',
+      '<leader>ge',
       function()
         require('fzf-lua').oldfiles()
       end,
