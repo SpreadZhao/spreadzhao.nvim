@@ -78,14 +78,15 @@ return {
         --  To jump back, press <C-t>.
         map('gd', function()
           local fzf_lua = require 'fzf-lua'
-          local params = vim.lsp.util.make_position_params()
-          vim.lsp.buf_request(params.bufnr, 'textDocument/definition', params, function(_, result, _, _)
-            if not result or vim.tbl_isempty(result) then
-              vim.notify('No definition found', vim.log.levels.INFO)
-            else
-              fzf_lua.lsp_definitions()
-            end
-          end)
+          fzf_lua.lsp_definitions()
+          -- local params = vim.lsp.util.make_position_params()
+          -- vim.lsp.buf_request(params.bufnr, 'textDocument/definition', params, function(_, result, _, _)
+          --   if not result or vim.tbl_isempty(result) then
+          --     vim.notify('No definition found', vim.log.levels.INFO)
+          --   else
+          --     fzf_lua.lsp_definitions()
+          --   end
+          -- end)
         end, '[G]oto [D]efinition')
 
         -- WARN: This is not Goto Definition, this is Goto Declaration.
