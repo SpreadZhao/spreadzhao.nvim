@@ -33,10 +33,11 @@ require('lazy').setup {
     require 'plugins.autopairs',
     -- require 'plugins.neo-tree',
     require 'plugins.oil',
-    require 'plugins.leap',
+    -- require 'plugins.leap',
     require 'plugins.lualine',
     require 'plugins.gitsigns',
     require 'plugins.toggleterm',
+    require 'plugins.flash',
     -- LSP Plugins
     require 'plugins.lsp.lazydev',
     require 'plugins.lsp.nvim-lspconfig',
