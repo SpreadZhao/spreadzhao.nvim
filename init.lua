@@ -1,6 +1,7 @@
 -- require configs
 require 'config.basic'
 require 'config.keymaps'
+require 'config.lsp'
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
@@ -40,7 +41,9 @@ require('lazy').setup {
     require 'plugins.flash',
     -- LSP Plugins
     require 'plugins.lsp.lazydev',
-    require 'plugins.lsp.nvim-lspconfig',
+    require 'plugins.lsp.mason',
+    -- require 'plugins.lsp.init-lsp'
+    -- require 'plugins.lsp.nvim-lspconfig',
 
     -- require 'kickstart.plugins.debug',
     -- require 'kickstart.plugins.lint',
