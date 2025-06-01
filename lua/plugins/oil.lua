@@ -6,7 +6,7 @@ return {
   keys = {
     {
       '<leader>fs',
-      '<CMD>Oil --float<CR>',
+      '<CMD>Oil<CR>',
       mode = 'n',
       desc = '[F]ile [S]ystem',
     },
