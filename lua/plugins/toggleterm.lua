@@ -1,8 +1,13 @@
 return {
   'akinsho/toggleterm.nvim',
   version = '*',
-  opts = {
-    open_mapping = '<leader>tt',
-    direction = 'float',
+  keys = {
+    {
+      '<leader>tt',
+      '<CMD>ToggleTerm<CR>',
+      mode = 'n',
+      desc = '[T]oggle [T]erm',
+    },
   },
+  opts = {},
 }
