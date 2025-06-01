@@ -36,6 +36,7 @@ return { -- Autoformat
       html = { 'prettierd', 'prettier', stop_after_first = true },
       rust = { 'rustfmt', lsp_format = 'fallback' },
       lua = { 'stylua' },
+      json = { 'fixjson', lsp_format = 'fallback' },
     },
   },
 }
