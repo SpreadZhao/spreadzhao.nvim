@@ -77,8 +77,10 @@ return {
         --  This is where a variable was first declared, or where a function is defined, etc.
         --  To jump back, press <C-t>.
         map('gd', function()
-          local fzf_lua = require 'fzf-lua'
-          fzf_lua.lsp_definitions()
+          require('fzf-lua').lsp_definitions()
+          -- vim.lsp.buf.definition()
+          -- local fzf_lua = require 'fzf-lua'
+          -- fzf_lua.lsp_definitions()
           -- local params = vim.lsp.util.make_position_params()
           -- vim.lsp.buf_request(params.bufnr, 'textDocument/definition', params, function(_, result, _, _)
           --   if not result or vim.tbl_isempty(result) then
@@ -234,6 +236,9 @@ return {
         },
       },
     }
+
+    -- my custom lsp-servers
+    require 'plugins.lsp.kotlin-lsp'
 
     -- Ensure the servers and tools above are installed
     --
