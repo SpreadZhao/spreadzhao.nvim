@@ -43,7 +43,7 @@ require('lazy').setup {
     require 'plugins.flash',
     -- LSP Plugins
     require 'plugins.lsp.lazydev',
-    require 'plugins.lsp.mason',
+    -- require 'plugins.lsp.mason',
     require 'plugins.lsp.fidget',
     -- Debugger
     require 'plugins.debug',
