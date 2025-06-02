@@ -57,6 +57,8 @@ return { -- Autocompletion
       --
       -- See :h blink-cmp-config-keymap for defining your own keymap
       preset = 'default',
+      ['<C-k>'] = { 'select_prev', 'fallback_to_mappings' },
+      ['<C-j>'] = { 'select_next', 'fallback_to_mappings' },
 
       -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
       --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -94,5 +96,14 @@ return { -- Autocompletion
 
     -- Shows a signature help window while you type arguments for a function
     signature = { enabled = true },
+
+    -- auto show cmdline hint
+    cmdline = {
+      completion = {
+        menu = {
+          auto_show = true,
+        },
+      },
+    },
   },
 }

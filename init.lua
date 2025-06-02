@@ -20,8 +20,16 @@ rtp:prepend(lazypath)
 
 require('lazy').setup {
   spec = {
+    -- Theme
     require 'plugins.vscode',
+    -- require 'plugins.catppuccin',
+    -- Git
     require 'plugins.lazygit',
+    require 'plugins.gitsigns',
+    -- File Manage
+    require 'plugins.oil',
+    -- require 'plugins.neo-tree',
+    -- Basic Functionalities
     require 'plugins.which-key',
     require 'plugins.fzf-lua',
     require 'plugins.conform',
@@ -30,24 +38,22 @@ require('lazy').setup {
     require 'plugins.nvim-treesitter',
     require 'plugins.indent_line',
     require 'plugins.autopairs',
-    require 'plugins.oil',
     require 'plugins.lualine',
-    require 'plugins.gitsigns',
     require 'plugins.toggleterm',
     require 'plugins.flash',
     -- LSP Plugins
     require 'plugins.lsp.lazydev',
     require 'plugins.lsp.mason',
+    require 'plugins.lsp.fidget',
+    -- Debugger
+    require 'plugins.debug',
 
     -- Deprecated
-    -- require 'plugins.neo-tree',
     -- require 'plugins.leap',
     -- require 'plugins.mini',
     -- require 'plugins.telescope',
-    -- require 'plugins.catppuccin',
     -- require 'plugins.lsp.init-lsp'
     -- require 'plugins.lsp.nvim-lspconfig',
-    -- require 'kickstart.plugins.debug',
     -- require 'kickstart.plugins.lint',
   },
   install = {
