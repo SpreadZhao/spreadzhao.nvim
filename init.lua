@@ -20,21 +20,17 @@ rtp:prepend(lazypath)
 
 require('lazy').setup {
   spec = {
-    require 'plugins.catppuccin',
+    require 'plugins.vscode',
     require 'plugins.lazygit',
     require 'plugins.which-key',
-    -- require 'plugins.telescope',
     require 'plugins.fzf-lua',
     require 'plugins.conform',
     require 'plugins.blink-cmp',
     require 'plugins.todo-comments',
-    -- require 'plugins.mini',
     require 'plugins.nvim-treesitter',
     require 'plugins.indent_line',
     require 'plugins.autopairs',
-    -- require 'plugins.neo-tree',
     require 'plugins.oil',
-    -- require 'plugins.leap',
     require 'plugins.lualine',
     require 'plugins.gitsigns',
     require 'plugins.toggleterm',
@@ -42,14 +38,20 @@ require('lazy').setup {
     -- LSP Plugins
     require 'plugins.lsp.lazydev',
     require 'plugins.lsp.mason',
+
+    -- Deprecated
+    -- require 'plugins.neo-tree',
+    -- require 'plugins.leap',
+    -- require 'plugins.mini',
+    -- require 'plugins.telescope',
+    -- require 'plugins.catppuccin',
     -- require 'plugins.lsp.init-lsp'
     -- require 'plugins.lsp.nvim-lspconfig',
-
     -- require 'kickstart.plugins.debug',
     -- require 'kickstart.plugins.lint',
   },
   install = {
-    colorscheme = { 'catppuccin' },
+    colorscheme = { 'vscode' },
   },
 }
 -- The line beneath this is called `modeline`. See `:help modeline`
