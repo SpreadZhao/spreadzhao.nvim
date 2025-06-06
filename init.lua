@@ -41,12 +41,12 @@ require('lazy').setup {
     require 'plugins.which-key',
     -- LSP Plugins
     require 'plugins.lsp.lazydev',
-    -- require 'plugins.lsp.mason',
     require 'plugins.lsp.fidget',
     -- Debugger
     require 'plugins.debug',
 
     -- Deprecated
+    -- require 'plugins.lsp.mason',
     -- require 'plugins.catppuccin',
     -- require 'plugins.leap',
     -- require 'plugins.mini',

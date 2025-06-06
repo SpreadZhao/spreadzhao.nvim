@@ -14,15 +14,15 @@ return {
       desc = '[F]ind [F]iles',
     },
     {
-      '<leader>fb',
+      '<leader>ge',
       function()
         require('fzf-lua').buffers()
       end,
       mode = 'n',
-      desc = '[F]ind [B]uffers',
+      desc = 'Find Buffers',
     },
     {
-      '<leader>ge',
+      '<leader>fh',
       function()
         require('fzf-lua').oldfiles()
       end,
