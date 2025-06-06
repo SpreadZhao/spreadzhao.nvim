@@ -22,25 +22,23 @@ require('lazy').setup {
   spec = {
     -- Theme
     require 'plugins.vscode',
-    -- require 'plugins.catppuccin',
     -- Git
-    require 'plugins.lazygit',
     require 'plugins.gitsigns',
+    require 'plugins.lazygit',
     -- File Manage
     require 'plugins.oil',
-    -- require 'plugins.neo-tree',
     -- Basic Functionalities
-    require 'plugins.which-key',
-    require 'plugins.fzf-lua',
-    require 'plugins.conform',
-    require 'plugins.blink-cmp',
-    require 'plugins.todo-comments',
-    require 'plugins.nvim-treesitter',
-    require 'plugins.indent_line',
     require 'plugins.autopairs',
-    require 'plugins.lualine',
-    require 'plugins.toggleterm',
+    require 'plugins.blink-cmp',
+    require 'plugins.conform',
     require 'plugins.flash',
+    require 'plugins.fzf-lua',
+    require 'plugins.indent_line',
+    require 'plugins.lualine',
+    require 'plugins.nvim-treesitter',
+    require 'plugins.todo-comments',
+    require 'plugins.toggleterm',
+    require 'plugins.which-key',
     -- LSP Plugins
     require 'plugins.lsp.lazydev',
     -- require 'plugins.lsp.mason',
@@ -49,11 +47,13 @@ require('lazy').setup {
     require 'plugins.debug',
 
     -- Deprecated
+    -- require 'plugins.catppuccin',
     -- require 'plugins.leap',
     -- require 'plugins.mini',
     -- require 'plugins.telescope',
     -- require 'plugins.lsp.init-lsp'
     -- require 'plugins.lsp.nvim-lspconfig',
+    -- require 'plugins.neo-tree',
     -- require 'kickstart.plugins.lint',
   },
   install = {
