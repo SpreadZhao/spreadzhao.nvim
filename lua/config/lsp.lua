@@ -52,6 +52,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end,
       },
     }
+    local bufopts = { noremap = true, silent = true, buffer = bufnr }
+
+    map('<leader>D', vim.diagnostic.open_float, '[D]iagnos')
 
     -- highlight under cursor
     if client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf) then
