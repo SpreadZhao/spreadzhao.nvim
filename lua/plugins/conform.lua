@@ -29,6 +29,9 @@ return { -- Autoformat
       end
     end,
     formatters_by_ft = {
+      bash = { 'shfmt' },
+      zsh = { 'shfmt' },
+      sh = { 'shfmt' },
       c = { 'clang-format' },
       cmake = { 'cmake-format' },
       cpp = { 'clang-format' },

@@ -86,6 +86,8 @@ vim.o.expandtab = true
 vim.o.autoindent = true
 vim.opt.wrap = false
 
+-- vim.o.smartindent = true
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
