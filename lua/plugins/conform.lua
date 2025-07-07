@@ -30,6 +30,7 @@ return { -- Autoformat
     end,
     formatters_by_ft = {
       bash = { 'shfmt' },
+      javascript = { 'prettierd' },
       zsh = { 'shfmt' },
       sh = { 'shfmt' },
       c = { 'clang-format' },
