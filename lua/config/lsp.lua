@@ -2,6 +2,7 @@ vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'clangd'
 vim.lsp.enable 'kotlin-lsp'
 vim.lsp.enable 'rust_analyzer'
+vim.lsp.enable 'asm-lsp'
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
